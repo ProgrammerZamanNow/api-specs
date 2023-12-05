@@ -104,6 +104,9 @@
                 }
               }
             }
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
           }
         }
       }
@@ -208,6 +211,24 @@
     "responses": {
       "400": {
         "description": "Bad request",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "messages": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "404": {
+        "description": "Not found",
         "content": {
           "application/json": {
             "schema": {
